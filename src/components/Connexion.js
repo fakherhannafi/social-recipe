@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 
-class Connexion extends React.Component {
+class Connexion extends Component {
   state = {
     pseudo: '',
     goToApp: false
@@ -17,7 +17,7 @@ class Connexion extends React.Component {
     this.setState({ pseudo })
   }
 
-  render () {
+  render() {
     if (this.state.goToApp) {
       return <Redirect push to={`/pseudo/${this.state.pseudo}`} />
     }
